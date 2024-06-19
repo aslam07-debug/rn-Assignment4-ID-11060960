@@ -8,6 +8,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { StyleSheet, Text, View,Button, Pressable ,Image, FlatList} from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
+import Icon from 'react-native-vector-icons/FontAwesome'
 import JobCard from './components/jobCard';
 import HistoryCard from './components/HistoryCard';
 const HomeScreen=({route})=>{
@@ -51,6 +52,9 @@ const HomeScreen=({route})=>{
   placeholder='Search a job or Poosition'
   style={styles.searchBox}
   />
+  <Icon name="search" size={20} color="grey" style={{top:115,left:15,position:'absolute'}} />
+
+
   <View style={{height:48,width:48,top:100,left:20,borderRadius:12,backgroundColor:'#F2F2F3'}}>
    <Image source={require('./assets/filter.5.png')} style={{position:'relative',margin:'auto'}}/>
    </View>
@@ -89,7 +93,7 @@ const HomeScreen=({route})=>{
    data={activitiesData}
    
    renderItem={({item})=>(
-    <HistoryCard Salary={item.Salary}  companyLogo={item.companyLogo} location={item.location} role={item.role}/>
+    <HistoryCard Salary={item.Salary}  companyLogo={item.companyLogo} location={item.location} role={item.role} company={item.company}  />
   )}
   keyExtractor={(item)=>{
     return( item.id)
@@ -123,6 +127,7 @@ const styles = StyleSheet.create(
     },
     searchBox:{
       top:100,
+      paddingLeft:40,
       backgroundColor:'#F2F2F3',
       height:48,
       width:263,
