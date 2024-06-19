@@ -7,6 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import LogIn from './LogInScreen';
+import HomeScreen from './Home';
 const Stack = createStackNavigator();
 export default function App() {
   return (
@@ -19,6 +20,11 @@ export default function App() {
     options={ {
   headerShown:false,}
     }
+    />
+    <Stack.Screen 
+    name="Home"
+    component={HomeScreen}
+    options={{headerShown:false}}
     />
 
   </Stack.Navigator>

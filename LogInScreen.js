@@ -8,11 +8,16 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { StyleSheet, Text, View,Button, Pressable ,Image} from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
+import {HomeScreen} from './Home';
 
 
-const LogIn = ()=>{
+const LogIn = ({navigation})=>{
+  
   const [name,setName] = useState('');
   const [email,setEmail]= useState('');
+  var handleSignUp=()=>{
+   return  navigation.navigate('Home',{name,email});
+  }
 return(
 <View style={{left:20}}>
 
@@ -28,17 +33,17 @@ return(
 style={styles.InputContainer}
 placeholder='Name'
 value={name}
-onChange={setName}
+onChangeText={setName}
 />
 <TextInput  
 style={[styles.InputContainer,{marginTop:-12}]}
 placeholder='Email'
 value={email}
-onChange={setEmail}
+onChangeText={setEmail}
 />
 
-<TouchableOpacity style={[styles.Button,{display:'flex'}]}>
-   <Text style={{margin:'auto',color:"#FFFFFF"}}>Log in</Text>
+<TouchableOpacity style={[styles.Button,{display:'flex'}]} onPress={handleSignUp} >
+   <Text style={{margin:'auto',color:'white'}}> Log in</Text>
 
 </TouchableOpacity>
 
