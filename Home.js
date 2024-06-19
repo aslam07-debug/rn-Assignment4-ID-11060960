@@ -13,13 +13,13 @@ import HistoryCard from './components/HistoryCard';
 const HomeScreen=({route})=>{
   const cardData = [
     { id: '1', Salary: '$186,000', backgroundColor: '#1a73e8', companyLogo: require('./assets/Facebook.png') },
-    { id: '2',Salary: '$186,000', backgroundColor: '#c2185b', companyLogo: require('./assets/Google.png') },
-    { id: '3',Salary: '$186,000', backgroundColor: '#00796b', companyLogo: require('./assets/Apple.png') },
-    { id: '4',Salary: '$186,000', backgroundColor: '#5d4037' , companyLogo: require('./assets/Facebook.png')},
-    { id: '5', Salary: '$186,000', backgroundColor: '#7b1fa2', companyLogo: require('./assets/Facebook.png') },
-    { id: '6', Salary: '$186,000', backgroundColor: '#303f9f', companyLogo: require('./assets/Facebook.png') },
-    { id: '7', Salary: '$186,000', backgroundColor: '#0288d1', companyLogo: require('./assets/Facebook.png') },
-    { id: '8', Salary: '$186,000', backgroundColor: '#c2185b', companyLogo: require('./assets/Facebook.png')},
+    { id: '2',Salary: '$180,000', backgroundColor: '#c2185b', companyLogo: require('./assets/Google.png') },
+    { id: '3',Salary: '$196,000', backgroundColor: '#00796b', companyLogo: require('./assets/Apple.png') },
+    { id: '4',Salary: '$160,000', backgroundColor: '#5d4037' , companyLogo: require('./assets/Facebook.png')},
+    { id: '5', Salary: '$176,000', backgroundColor: '#7b1fa2', companyLogo: require('./assets/Facebook.png') },
+    { id: '6', Salary: '$76,000', backgroundColor: '#303f9f', companyLogo: require('./assets/Facebook.png') },
+    { id: '7', Salary: '$86,000', backgroundColor: '#0288d1', companyLogo: require('./assets/Facebook.png') },
+    { id: '8', Salary: '$136,000', backgroundColor: '#c2185b', companyLogo: require('./assets/Facebook.png')},
   ];
   const activitiesData = [
     { id: '1', Salary: '$186,000',  companyLogo: require('./assets/facebookPopular.png'), location:"Los Angeles,US", role: "Project Manager" ,company:"Facebook"},
